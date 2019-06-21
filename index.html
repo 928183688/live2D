@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.fghrsh.net/zb_users/plugin/MyhkPlayer/assets/player.css?v=20180204&v2=20190107">
+    <link rel="stylesheet" href="https://www.fghrsh.net/zb_users/plugin/MyhkPlayer/assets/jquery-letterfx.min.css">
+    <link rel="stylesheet" href="https://www.fghrsh.net/zb_users/plugin/mp3player/flash/audioplayer.js">
+    <style>
+        #live2dcanvas {
+            border: 0 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="live2d-widget" class="live2d-widget-container"
+        style="position: fixed; right: 0px; bottom: -20px; width: 150px; height: 300px; z-index: 99999; opacity: 1; pointer-events: none;">
+        <canvas id="live2dcanvas" width="300" height="600"
+            style="position: absolute; left: 0px; top: 0px; width: 150px; height: 300px;"></canvas>
+        </div>
+
+        <!-- <div id="wenkmPlayer" style="background: rgba(126, 128, 135, 0.8);" class="show">
+                <div class="player">
+                    <div class="infos">
+                        <div class="songstyle"><i class="fa fa-music"></i> <span class="song"><span title="おでまし!シェイピと千夜一夜物語">おでまし!シェ...</span></span></div>
+                        <div class="timestyle"><i class="fa fa-clock-o"></i> <span class="time">02:04 / 04:07</span></div>
+                        <div class="artiststyle"><i class="fa fa-user"></i> <span class="artist"><span title="SHAKING PINK">SHAKING PINK</span></span><span class="moshi"><i class="loop fa fa-retweet current"></i> 顺序播放</span></div>
+                        <div class="artiststyle"><i class="fa fa-folder"></i> <span class="artist1"><span title="おでまし!シェイピと千夜一夜物語">おでまし!シェ...</span></span><span class="geci"><i class="fa fa-check-circle"></i> 歌词显示</span></div>
+                    </div>
+                    <div class="control">
+                        <i class="loop fa fa-retweet current" title="顺序播放"></i>
+                        <i class="prev fa fa-backward" title="上一首"></i>
+                        <div class="status" style="background-image: linear-gradient(270.932deg, rgb(129, 195, 0) 50%, transparent 50%, transparent), linear-gradient(270deg, rgb(129, 195, 0) 50%, rgb(108, 105, 113) 50%, rgb(108, 105, 113));">
+                            <b>
+                                <i class="play fa fa-play" title="播放"></i>
+                                <i class="pause fa fa-pause" title="暂停"></i>
+                            </b>
+                        </div>
+                        <i class="next fa fa-forward" title="下一首"></i>
+                        <i class="random fa fa-random" title="随机播放"></i>
+                    </div>
+                    <div class="musicbottom">
+                        <div class="volumecontrol">
+                            <div class="volume fa fa-volume-up"></div>
+                            <div class="volumeprogress">
+                                <div class="progressbg">
+                                    <div class="progressbg1" style="height: 50px;"></div>
+                                    <div class="ts" style="top: 50px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playprogress">
+                            <div class="progressbg">
+                                <div class="progressbg1" style="width: 50%;"></div>
+                                <div class="progressbg2" style="left: 0%; width: 51.2504%;"></div>
+                                <div class="ts" style="left: 50%;"></div>
+                            </div>
+                        </div>
+                        <div class="switch-playlist">
+                            <i class="fa fa-bars" title="播放列表"></i>
+                        </div>
+                        <div class="switch-ksclrc" style="display: none;"><i class="fa fa-toggle-on" title="关闭歌词"></i></div>
+                        <div class="switch-default" style="right: 65px;">
+                            <i class="fa fa-refresh" title="切换默认专辑"></i>
+                        </div>
+                        <div class="switch-down" style="display: block; right: 35px;"><a class="down"><i class="fa fa-cloud-download" title="下载：おでまし!シェイピと千夜一夜物語 - SHAKING PINK"></i></a></div>
+                    </div>
+                    <div class="cover"><img src="https://mp3-src.fghrsh.net/94bd6dc4e2fd440f2755932a984de068/5D0C4A3D/2-426881680.jpg!120y120"></div>
+                </div>
+                <div class="playlist">
+                    <div class="playlist-bd">
+                        <div class="album-list">
+                            <div class="musicheader">专辑列表(8)</div>
+                                <div class="list mCustomScrollbar _mCS_2"><div class="mCustomScrollBox mCS-light" id="mCSB_2" style="position:relative; height:100%; overflow:hidden; max-width:100%;"><div class="mCSB_container" style="position:relative; top:0;"><ul><li><i class="fa fa-angle-right"></i><span class="index">1</span><span class="artist"></span>大杂烩&nbsp;-&nbsp;(网易歌单)307628639</li><li class="current"><i class="fa fa-angle-right"></i><span class="index">2</span><span class="artist">暂停播放&nbsp;&gt;&nbsp;</span>ACG&nbsp;-&nbsp;(网易歌单)526089535</li><li><i class="fa fa-angle-right"></i><span class="index">3</span><span class="artist"></span>EDM&nbsp;-&nbsp;(网易歌单)526098247</li><li><i class="fa fa-angle-right"></i><span class="index">4</span><span class="artist"></span>BGM&nbsp;-&nbsp;(网易歌单)526107034</li><li><i class="fa fa-angle-right"></i><span class="index">5</span><span class="artist"></span>华语&nbsp;-&nbsp;(网易歌单)526077600</li><li><i class="fa fa-angle-right"></i><span class="index">6</span><span class="artist"></span>粤语&nbsp;-&nbsp;(网易歌单)526084713</li><li><i class="fa fa-angle-right"></i><span class="index">7</span><span class="artist"></span>欧美&nbsp;-&nbsp;(网易歌单)526062910</li><li><i class="fa fa-angle-right"></i><span class="index">8</span><span class="artist"></span>日韩&nbsp;-&nbsp;(网易歌单)2219846751</li></ul></div><div class="mCSB_scrollTools" style="position: absolute; display: block;"><div class="mCSB_draggerContainer"><div class="mCSB_dragger" style="position: absolute; height: 284px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="position: relative; line-height: 284px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+                        </div>
+                        <div class="song-list">
+                            <div class="musicheader"><i class="fa fa-angle-right"></i><span></span></div>
+                        <div class="list mCustomScrollbar _mCS_1"><div class="mCustomScrollBox mCS-light" id="mCSB_1" style="position:relative; height:100%; overflow:hidden; max-width:100%;"><div class="mCSB_container mCS_no_scrollbar" style="position:relative; top:0;"><ul></ul></div><div class="mCSB_scrollTools" style="position: absolute; display: none;"><div class="mCSB_draggerContainer"><div class="mCSB_dragger" style="position: absolute; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="position:relative;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="switch-player" style="background: rgba(126, 128, 135, 0.3);">
+                    <i class="fa fa-angle-right" style="margin-top: 20px;"></i>
+                </div>
+            </div> -->
+
+
+
+</body>
+
+</html>
+<script type="text/javascript" charset="utf-8" src='./L2Dwidget.0.min.js'></script>
+<script src="./love.js"></script>
+<script type="text/javascript" charset="utf-8" src="./L2Dwidget.min.js"></script>
+<script type="text/javascript">
+    L2Dwidget.init({
+        "display": {
+            "superSample": 2,
+            "width": 200,
+            "height": 400,
+            "position": "right",
+            "hOffset": 0,
+            "vOffset": 0
+        }
+    });
+</script>
+</script>
